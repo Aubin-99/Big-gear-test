@@ -1,0 +1,31 @@
+.intro
+{
+    color:black;
+    text-align: center;
+}
+.image_lien
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+.image_lien article
+{
+    width: 48%;
+    height: 300px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.image_lien img
+{
+    max-width: 70%;
+    max-height: 70%;
+    margin: auto;
+}
+.descriptif
+{
+    text-align: center;
+}

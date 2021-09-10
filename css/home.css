@@ -1,0 +1,32 @@
+.imageTrain{
+    display: block;
+    width: 100%;
+    filter: blur(0px);
+}
+.titreAccueil{
+    text-align: center;
+    font-size: 3em;
+}
+.imgIntro {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.imgIntro img {
+    vertical-align: middle;
+}
+
+.imgIntro .intro{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffff;
+    width: 100%;
+    padding: 2%;
+    height: 30%;
+    transition-duration: 0.8s;
+}
+.imgIntro .intro:hover{
+    height: 40%;
+}

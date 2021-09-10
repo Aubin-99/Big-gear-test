@@ -1,0 +1,304 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+.imgLogo{
+    border-radius: 50%;
+    width: 6em;
+    float: left;
+}
+
+/* a partir d'ici haut de page : topbar.php*/
+.firstDiv{
+    width: 100%;
+    background-color: #f7f7f9;
+    padding: 0 2%;
+    top: 0%;
+    height: 6em;
+    transition-duration: 0.5s;
+}
+.firstDiv .app-name{
+    color: inherit;
+    font-size: 4.6em;
+}
+.firstDiv .topSearch{
+    position: relative;
+    top: 26%;
+    right: 25%;
+    width: 40%;
+    float: right;
+}
+.firstDiv .topSearch-input{
+    width: 150px;
+    display: none;
+    border: 2px solid #cccccc;
+    border-radius: 16px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url("../icones/search-50.png");/*marche pas*/
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    outline: none;
+    transition: width 0.4s ease-in-out;
+}
+.firstDiv .topSearch-input:focus{
+    width: 100%;
+    border: 2px solid black;
+}
+@media screen and (max-width: 600px) {
+    .firstDiv{
+        font-size: 15px;
+    }
+    .firstDiv .topSearch{
+        display: none;
+    }
+    .imgLogo{
+        display: none;
+    }
+}
+.topbar{
+    background-color: #6d071a;
+    line-height: 35px;
+    font-weight: bold;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.topbar:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.topbar a{
+    color: white;
+    font-size: 1.5em;
+    padding:0.5em 1em;
+    transition-duration: 0.7s;
+    float: left; /* à enlever pour responsive*/
+    display: block;
+    border-bottom: 3px solid transparent;
+}
+.topbar a:focus{
+    color: #6d071a;
+    background-color: #f7f7f9;
+    border-bottom: 3px solid gold;
+}
+/*.marginLeft{ /* Marge de l'acceuil pour centrer 'depannage' mais pas fou à revoir
+    margin-left: 16%;
+}*/
+.topbar a:hover{
+    background-color: #f7f7f9;
+    color: #6d071a;
+    border-bottom: 3px solid gold;
+}
+.topbar .login-container {
+    float: right;
+    line-height: 3.9em;
+}
+
+.topbar .login-container button {
+    padding: 0.3em 0.8em;
+    margin-top: 8px;
+    margin-right: 0.5em;
+    background-color: #6d071a;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.6s;
+    border-bottom: 3px solid transparent;
+    outline: none;
+}
+.topbar .login-container button:hover{
+    background-color: #f7f7f9;
+    color: #6d071a;
+    border-bottom: 3px solid gold;
+    border-radius: 5px;
+}
+.active {
+    background-color: #6d071a;
+    color: white;
+}
+
+/*@media screen and (max-width: 600px) { /*responsive topbar*/
+/*  .topbar .login-container {
+      float: none;
+  }
+  .topbar a, .topbar .login-container button{
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+  }
+  .topbar input{
+      border: 1px solid #ccc;
+  }
+}/* à revoir responsive*/
+/*début dropdown (langues)
+.dropdown {
+    float: right;
+    overflow: hidden;
+
+}
+.dropdown .dropbtn {
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    color: white;
+   /* padding: 0.5em 1em;
+    background-color: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #6d071a;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #6d071a;
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ */
+.topbar .icon {
+    display: none;
+}
+/*responsive topbar*/
+@media screen and (max-width: 600px) {
+    .topbar .active{
+        font-size: 16px;
+    }
+    .topbar a:not(:first-child) {
+        display: none;
+        font-size: 10px;
+    }
+    .topbar .login-container{
+        font-size: 10px;
+
+    }
+    .topbar a.icon {
+        float: right;
+        display: block;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topbar.responsive {position: relative;}
+    .topbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 10px;
+    }
+    .topbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        font-size: 10px;
+    }
+    .topbar.responsive .dropdown {float: none;}
+    .topbar.responsive .dropdown-content {position: relative;}
+    .topbar.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+/*fin topbar.php*/
+
+/* A partir d'ici pied de page : footer.php*/
+.social{
+    position: relative;
+    left: 42.5%;
+}
+.fa {
+    padding: 18px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+}
+.fa:hover {
+    opacity: 0.6;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-instagram {
+    background: #a62f8c;
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+footer{
+    background-color: #dad8d8;
+    line-height: 35px;
+    padding-top: 1em;
+    border-top: 1px solid rgba(0,0,0,0.5);
+}
+.privacy{
+    text-align: center;
+}
+.privacy span a{
+    padding: 0em 0.5em;
+    color: black;
+    transition-duration: 0.5s;
+}
+.privacy span a:hover{
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+#copyright{
+    text-align: center;
+    font-size: 0.7em;
+}
+/*fin footer.php*/

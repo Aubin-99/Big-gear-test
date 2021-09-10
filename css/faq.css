@@ -1,0 +1,31 @@
+.question_rep
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.question_rep article
+{
+    font-family: Futura, Tahoma, sans-serif;
+    width: 90%;
+    text-align: center;
+    margin: 12px;
+}
+.question_rep article h3
+{
+    color: #f7f7f8;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 3px;
+    padding: 2px;
+    background-color: #7d403d;
+}
+.question_rep article p
+{
+    color: black;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 3px;
+    padding: 2px;
+    background-color: #f7f7f8;
+}

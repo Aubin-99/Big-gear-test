@@ -1,0 +1,154 @@
+/* Full-width input fields */
+.field-input{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    outline: none;
+    transition-duration: 0.8s;
+    opacity: 0.5;
+    border-radius: 11px;
+}
+.field-input:focus{
+    opacity: 1;
+    border-radius: 15px;
+}
+.eye{
+    position: relative;
+    left: 91%;
+    bottom: 3.3em;
+}
+.eye.icon {
+    color: #000;
+    margin-left: 3px;
+    margin-top: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 70% 15%;
+    border: solid 1px currentColor;
+    transform: rotate(45deg);
+}
+
+.eye.icon:before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: solid 1px currentColor;
+    /*background-color: black; --> à rajouter via js*/
+}
+
+/* Style commun a tous les bouttons */
+.bu {
+    background-color: #6a7124;
+    color: white;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.5;
+    transition-duration: 0.6s;
+    outline: none;
+}
+
+.bu:hover{
+    opacity:1;
+}
+/*.bu:hover span{ essai de petites fleche pour inscription mais marche pô
+    padding-right: 20px;
+}
+.bu span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.bu:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+*/
+/* Extra styles for the cancel button */
+.bu-cancelbtn {
+    padding: 14px 20px;
+    background-color: #6d071a;
+}
+.bu-cancelbtn, .bu-signupbtn {
+    float: left;
+    width: 50%;
+}
+.popup {
+    padding: 16px;
+    font-size: 75%;
+}
+/* le modal arrière plan*/
+#id01{
+    /*display: none; /*caché par defaut --> potion magique*/
+    position: fixed;
+    z-index: 1;/* Sur le premier plan*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    overflow-y: hidden;
+    background-color: rgba(71,78,93,0.5);
+    padding-top: 0px;
+    transition: 0.7s;
+}
+
+/* Div du modal */
+#modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* centrer */
+    border: 1px solid #888;
+    width: 35%;
+    border-radius: 9px;
+}
+/* la petite bar*/
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* la croix pour fermer*/
+.close {
+    position: absolute;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+.close:hover,
+.close:focus {
+    color: #6d071a;
+    cursor: pointer;
+}
+
+/* on enlève tout (remède miracle) */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.condition{
+    color: #007bb5;
+}
+.header{
+    display: block;
+    border-bottom: 2px solid black;
+}
+.errorContent{
+    /*A travailler*/
+}
+.errorEmail{
+    color: #6d071a;
+}
